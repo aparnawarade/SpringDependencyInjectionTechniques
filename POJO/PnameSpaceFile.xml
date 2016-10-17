@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--  <bean id="c" class="POJO.car2" p:name="Aparna" autowire="byType">
+   </bean>
+   -->
+    <bean id="c" class="POJO.car2" p:name="Aparna" autowire="byName">
+   </bean>
+  
+   <bean id="engine" class="POJO.Engine2" c:engineNo="123456789"></bean>
+   <!-- <bean id="e1" class="POJO.Engine2" c:engineNo="engine" autowire-candidate="false"></bean>
+    -->
+    <bean id="e1" class="POJO.Engine2" c:engineNo="engine" ></bean>
+   
+   
+</beans>
