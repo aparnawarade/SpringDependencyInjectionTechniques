@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+
+<beans>
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+	
+	<bean id="car" class="POJO.car" depends-on="e">
+		<property name="name">
+			<value>Aparna</value>
+		</property> 
+		<property name="engine"  ref="e">				
+		</property>
+		<property name="Fruits">
+			<list>
+				<value>orange</value>
+				<value>Banana</value>
+				<value>mango</value>
+			</list>
+		</property>
+		<property name="crickters">
+			<set>
+				<value>sachin</value>
+				<value>Sehvag</value>
+				<value>Mahi</value>
+			</set>
+		</property>
+		<property name="countrycapital">
+			<map>
+			 <entry key="India" value="Delhi"></entry>
+			 <entry key ="United States" value="Washington"></entry>
+			</map>
+		</property>
+	</bean>
+	
+</beans>
